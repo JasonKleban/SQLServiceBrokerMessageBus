@@ -47,7 +47,7 @@ It does not turn off native poison messaging handling because one scenario I nee
   5. Press Refresh to examine the database
   6. Press Install to install the basic environment (the "SSBMB" schema, some tables, contracts, message type)
   7. Add Channels, Topics, or Subscriptions as desired.  (You might not need to create any Subscriptions explicitly, so skip that.  To play around, merely create `TestChannel` and `TestTopic` - you can create and destroy these at will, as long as they're no in use - in which case they'd be locked)
-![https://imgur.com/wxNvLiu][SSBMBManager]
+![https://imgur.com/wxNvLiu](https://imgur.com/wxNvLiu)
   8. Optionally "Script Configuration" to put a complete script in your Windows copy & paste Clipboard.
 
   9. To test it out, run several instances of `SSBMBSample.exe` simultaneously after creating `TestChannel` and `TestTopic`. Run as both "Sender" and "Receiver" to start out.  How about multiple Receivers?  Then compare that behavior to the "Announce"  "Subscribe & Listen" modes.
