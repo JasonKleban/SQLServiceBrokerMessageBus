@@ -369,7 +369,7 @@
             this.Controls.Add(this.gbChannels);
             this.Controls.Add(this.gbConfiguration);
             this.Name = "Main";
-            this.Text = "SQL SSB Foreman";
+            this.Text = "SQL Service Broker Message Bus Manager";
             this.gbConfiguration.ResumeLayout(false);
             this.gbConfiguration.PerformLayout();
             this.gbChannels.ResumeLayout(false);
