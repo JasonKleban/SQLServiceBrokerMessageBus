@@ -38,18 +38,19 @@ It does not turn off native poison messaging handling because one scenario I nee
   1. Choose an existing database or create a new one.  You'll need to be an Admin or at least very priviledged to deploy SSBMB, but not to *use* the deployment.
   2. Ensure that Service Broker is enabled for that database.  (For your convenience, here's what you need to do to enable it.  If you don't, you might not get any errors but nothing will happen)
 
-    ALTER DATABASE TargetDatabase SET RESTRICTED_USER WITH ROLLBACK IMMEDIATE
-    ALTER DATABASE TargetDatabase SET ENABLE_BROKER
-    ALTER DATABASE TargetDatabase SET MULTI_USER WITH ROLLBACK IMMEDIATE
+        ALTER DATABASE TargetDatabase SET RESTRICTED_USER WITH ROLLBACK IMMEDIATE
+        ALTER DATABASE TargetDatabase SET ENABLE_BROKER
+        ALTER DATABASE TargetDatabase SET MULTI_USER WITH ROLLBACK IMMEDIATE
 
   3. Run the `SSBMBManager.exe`
   4. Update the connection string to point to the right server and database.
   5. Press Refresh to examine the database
   6. Press Install to install the basic environment (the "SSBMB" schema, some tables, contracts, message type)
   7. Add Channels, Topics, or Subscriptions as desired.  (You might not need to create any Subscriptions explicitly, so skip that.  To play around, merely create `TestChannel` and `TestTopic` - you can create and destroy these at will, as long as they're no in use - in which case they'd be locked)
-![https://imgur.com/wxNvLiu](https://imgur.com/wxNvLiu)
-  8. Optionally "Script Configuration" to put a complete script in your Windows copy & paste Clipboard.
 
+    ![SSBMBManager Screenshot](/../screenshot/SSBMBManagerScreenshot.png)
+
+  8. Optionally "Script Configuration" to put a complete script in your Windows copy & paste Clipboard.
   9. To test it out, run several instances of `SSBMBSample.exe` simultaneously after creating `TestChannel` and `TestTopic`. Run as both "Sender" and "Receiver" to start out.  How about multiple Receivers?  Then compare that behavior to the "Announce"  "Subscribe & Listen" modes.
   10. You can even run the included `.sql` "Test Scripts" in the `SSBMB` project in individual SQL Management Studio windows!
 
