@@ -34,6 +34,8 @@ This project illustrates example code on how to Send, Receive, Announce, and Lis
 
 It does not turn off native poison messaging handling because one scenario I need it for is on a SQL 2008 R0 server with no poison message handling override and I didn't feel like parameterizing that yet.  Adding that to each CREATE QUEUE statement throughout is all you'd need to do.
 
+    ![Sample SSBMB deployment](/../screenshot/SQLParts.png)
+
 ## Deployment Guide
 
   1. Choose an existing database or create a new one.  You'll need to be an Admin or at least very priviledged to deploy SSBMB, but not to *use* the deployment.
