@@ -1,1 +1,0 @@
-﻿EXEC sp_releaseapplock @Resource = 'SSBMB', @LockOwner = 'Session'
