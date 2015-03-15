@@ -17,6 +17,7 @@ It doesn't offer any new monitoring features, it just is a message bus with good
  * If you don't have the necessary permissions on *all* of the target environments, don't dispair; the SSBMBManager can script out (SQL script) an existing SSBMB deployment (from a dev machine, say) including installation, configuration of Channels, Topics, and permanent Subscriptions, tear-down of said configuration, and the uninstallation of the SSBMB instance ALL IN ONE SCRIPT for easy submission to the production DBAs.
  * Free & open source
  * Great performance & throughput (??? I don't know, but I *expect* it to be - help me benchmark it!)
+ * Combine components to acheive interesting distributed computing scenarios
 
 Supports Windows Azure-style message bus concepts of Channels (Azure's "Queues", but I didn't want to confuse the terminology with SQL SSB primatives) and Topics/Subscriptions broadcasted messages for both permanent and ephemeral Subscribers.
 
