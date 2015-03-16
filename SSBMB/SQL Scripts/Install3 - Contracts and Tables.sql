@@ -56,13 +56,16 @@ IF OBJECT_ID('[{0}].Subscriptions', 'U') IS NULL BEGIN
 END
 
 IF OBJECT_ID('[{0}].CleanUpEphemeralSubscriptions', 'P') IS NULL BEGIN
-   EXEC ('CREATE PROCEDURE [{0}].[CleanUpEphemeralSubscriptions] AS BEGIN SET NOCOUNT ON; END')
+    EXEC ('CREATE PROCEDURE [{0}].[CleanUpEphemeralSubscriptions] AS BEGIN SET NOCOUNT ON; END')
+    EXEC ('GRANT EXECUTE ON [{0}].[CleanUpEphemeralSubscriptions] TO [{1}]')
 END
 
 IF OBJECT_ID('[{0}].Subscribe', 'P') IS NULL BEGIN
-   EXEC ('CREATE PROCEDURE [{0}].[Subscribe] AS BEGIN SET NOCOUNT ON; END')
+    EXEC ('CREATE PROCEDURE [{0}].[Subscribe] AS BEGIN SET NOCOUNT ON; END')
+    EXEC ('GRANT EXECUTE ON [{0}].[Subscribe] TO [{1}]')
 END
 
 IF OBJECT_ID('[{0}].Unsubscribe', 'P') IS NULL BEGIN
-   EXEC ('CREATE PROCEDURE [{0}].[Unsubscribe] AS BEGIN SET NOCOUNT ON; END')
+    EXEC ('CREATE PROCEDURE [{0}].[Unsubscribe] AS BEGIN SET NOCOUNT ON; END')
+    EXEC ('GRANT EXECUTE ON [{0}].[Unsubscribe] TO [{1}]')
 END
