@@ -6,7 +6,7 @@ It doesn't offer any new monitoring features, it just is a message bus with good
 
  * Easily usable over ADO for sending/receiving on Channels or announcing/subscribing/listening on Topics - even works in raw SQL Management Studio!  (Stuff you probably didn't even know that results pane could even do!)
  * Transactional
- * Durable 
+ * Durable
  * Fairly simple
  * No polling
  * In-use locking
