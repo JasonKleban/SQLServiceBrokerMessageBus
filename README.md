@@ -23,6 +23,8 @@ Supports Windows Azure-style message bus concepts of Channels (Azure's "Queues",
 
 Once deployed, your custom message bus configuration runs entirely on SQL Server and its Service Broker **without employing any SQL CLR assemblies**.  SSBMB merely auto-generates the very complicated, native SQL & SSB primitives which provide desirable Message Bus behaviors.
 
+![Basic Demonstration of Channels and Topics](/../screenshot/SSBMBDemo.gif)
+
 ## Parts
 
 These two projects are only used in the deployment of SSBMB:
