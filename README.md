@@ -14,12 +14,12 @@ It doesn't offer any new monitoring features, it just is a message bus with good
  * Ephemeral, self-registering, self-cleaning subscriptions
  * Can co-exist in your existing database (or a dedicated one) and defaults to be in a non-DBO schema.
  * Runtime operations can be performed by PUBLIC (the default) or only by some specific SQL Role without granting new permissions to the Role.
- * If you don't have the necessary permissions on *all* of the target environments, don't dispair; the SSBMBManager can script out (SQL script) an existing SSBMB deployment (from a dev machine, say) including installation, configuration of Channels, Topics, and permanent Subscriptions, tear-down of said configuration, and the uninstallation of the SSBMB instance ALL IN ONE SCRIPT for easy submission to the production DBAs.
+ * If you don't have the necessary permissions on *all* of the target environments, don't despair; the SSBMBManager can script out (SQL script) an existing SSBMB deployment (from a dev machine, say) including installation, configuration of Channels, Topics, and permanent Subscriptions, tear-down of said configuration, and the uninstallation of the SSBMB instance ALL IN ONE SCRIPT for easy submission to the production DBAs.
  * Free & open source
  * Great performance & throughput (??? I don't know, but I *expect* it to be - help me benchmark it!)
- * Combine components to acheive interesting distributed computing scenarios
+ * Combine components to achieve interesting distributed computing scenarios
 
-Supports Windows Azure-style message bus concepts of Channels (Azure's "Queues", but I didn't want to confuse the terminology with SQL SSB primatives) and Topics/Subscriptions broadcasted messages for both permanent and ephemeral Subscribers.
+Supports Windows Azure-style message bus concepts of Channels (Azure's "Queues", but I didn't want to confuse the terminology with SQL SSB primitives) and Topics/Subscriptions broadcasted messages for both permanent and ephemeral Subscribers.
 
 Once deployed, your custom message bus configuration runs entirely on SQL Server and its Service Broker **without employing any SQL CLR assemblies**.  SSBMB merely auto-generates the very complicated, native SQL & SSB primitives which provide desirable Message Bus behaviors.
 
@@ -42,8 +42,8 @@ This image below shows a sample deployment and these are the only components.  T
 
 ## Deployment Guide
 
-  1. Choose an existing database or create a new one.  You'll need to be an Admin or at least very priviledged to deploy SSBMB, but not to *use* the deployment.
-  2. Ensure that Service Broker is enabled for that database.  (For your convenience, here's what you need to do to enable it.  If you don't, you might not get any errors but nothing will happen)
+  1. Choose an existing database or create a new one.  You'll need to be an Admin or at least very privileged to deploy SSBMB, but not to *use* the deployment.
+  2. Ensure that Service Broker is enabled for that database.  (For your convenience, here is what you need to do to enable it.  If you don't, you might not get any errors but nothing will happen)
 
         ALTER DATABASE TargetDatabase SET RESTRICTED_USER WITH ROLLBACK IMMEDIATE
         ALTER DATABASE TargetDatabase SET ENABLE_BROKER
@@ -53,7 +53,7 @@ This image below shows a sample deployment and these are the only components.  T
   4. Update the connection string to point to the right server and database
   5. Press Refresh to examine the database
   6. Press Install to install the basic environment (the "SSBMB" schema, some tables, contracts, message type)
-  7. Add Channels, Topics, or Subscriptions as desired.  (You might not need to create any Subscriptions explicitly, so skip that.  To play around, merely create `TestChannel` and `TestTopic` - you can create and destroy these at will, as long as they're no in use - in which case they'd be locked)
+  7. Add Channels, Topics, or Subscriptions as desired.  (You might not need to create any Subscriptions explicitly, so skip that.  To play around, merely create `TestChannel` and `TestTopic` - you can create and destroy these at will, as long as they're not in use - in which case they'd be locked)
 
     ![SSBMBManager Screenshot](/../screenshot/SSBMBManagerScreenshot.png)
 
