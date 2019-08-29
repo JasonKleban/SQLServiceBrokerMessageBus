@@ -4,7 +4,7 @@ This is a message bus implemented *natively* on SQL Server 2008+ and SQL Service
 
 It doesn't offer any new monitoring features, it just is a message bus with good properties:
 
- * Easily usable over ADO for sending/receiving on Channels or announcing/subscribing/listening on Topics - even works in raw SQL Management Studio!  (Stuff you probably didn't even know that results pane could even do!)
+ * Easily usable over ADO for sending/receiving on Channels or announcing/subscribing/listening on Topics - even works in raw SQL Management Studio!  (Stuff you probably didn't know that results pane could even do!)
  * Transactional
  * Durable
  * Fairly simple
